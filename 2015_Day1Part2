@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args) {
+        int count = 0;
+        Scanner input = new Scanner(System.in);
+        String slay = input.nextLine();
+
+        for(int i = 0; i < slay.length(); i++)
+        {
+            if(slay.substring(i, i+1).equals("("))
+            {
+                count++;
+            }
+            else if(slay.substring(i, i+1).equals(")"))
+            {
+                count--;
+            }
+
+          if(count==-1)
+        {
+          count=i+1;
+          break;
+        }
+        }
+        System.out.println(count);
+      
+    }
+}
